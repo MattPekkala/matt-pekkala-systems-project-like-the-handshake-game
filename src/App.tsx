@@ -32,17 +32,17 @@ const Settings: FC<{
   return (
     <section>      
       <div>
-        <label>Infection Chance:</label>
+        <label>Mosquito Concentration:</label>
         <input
           type="range"
           min="0"
           max="100"
           step="1"
-          value={parameters.infectionChance}
+          value={parameters.mosquitoConcentration}
           onChange={(e) =>
             setParameters({
               ...parameters,
-              infectionChance: parseFloat(e.target.value),
+              mosquitoConcentration: parseFloat(e.target.value),
             })
           }
         />
@@ -50,11 +50,11 @@ const Settings: FC<{
           type="number"
           min="0"
           max="100"
-          value={parameters.infectionChance}
+          value={parameters.mosquitoConcentration}
           onChange={(e) =>
             setParameters({
               ...parameters,
-              infectionChance: parseFloat(e.target.value),
+              mosquitoConcentration: parseFloat(e.target.value),
             })
           }
         />

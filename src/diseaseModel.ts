@@ -30,7 +30,7 @@ const updatePatient = (
   // IF we are NOT sick, see if our neighbors are sick...
   // choose a partner
   const partner = population[Math.floor(Math.random() * population.length)];
-  if (partner.infected && 100*Math.random() < params.infectionChance) {          
+  if (partner.infected && 100*Math.random() < params.mosquitoConcentration) {          
     updatedPatient = { ...patient, infected : true };
   }   
   return updatedPatient;

@@ -6,11 +6,9 @@ export type Patient = {
 };
 
 export type SimulationParameters = {  
-  infectionChance: number;
+  mosquitoConcentration: number;
 };
 
 export const defaultSimulationParameters: SimulationParameters = {
-  distanceThreshold: 5,
-  movement: 5,
-  infectionChance: 5,
+  mosquitoConcentration: 5,
 };
