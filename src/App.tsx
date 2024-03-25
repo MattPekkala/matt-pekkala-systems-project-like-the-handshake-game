@@ -30,7 +30,7 @@ const Settings: FC<{
   setParameters: (p: SimulationParameters) => void;
 }> = ({ parameters, setParameters }) => {
   return (
-    <section>      
+    <section>
       <div>
         <label>Mosquito Concentration:</label>
         <input
@@ -121,7 +121,7 @@ const App: FC = () => {
 
   return (
     <div>
-      <h1>My Systems Model</h1>
+      <h1>Zika Disease Model</h1>
       Population: {population.length}. Infected:{" "}
       {population.filter((p) => p.infected).length}
       <button onClick={runTurn}>Next turn...</button>
@@ -135,7 +135,10 @@ const App: FC = () => {
         onChange={onPopInput}
       />
       <button onClick={resetPopulation}>Reset Population</button>
-      <Settings parameters={simulationParameters} setParameters={setSimulationParameters} />
+      <Settings
+        parameters={simulationParameters}
+        setParameters={setSimulationParameters}
+      />
       <section className="side-by-side">
         <div className="chartContainer">
           <LineChart data={diseaseData} width={400} height={400}>
